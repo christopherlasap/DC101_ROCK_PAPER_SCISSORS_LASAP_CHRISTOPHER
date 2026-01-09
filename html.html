@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fun and interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript">
+    <meta name="author" content="Christopher Lasap">
+    <title>Rock Paper Scissors - Mini Arcade Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Game Container -->
+    <div class="game-container">
+        <!-- Header Section -->
+        <header class="game-header">
+            <h1 class="game-title">Rock Paper Scissors</h1>
+            <p class="game-subtitle">Choose your weapon and challenge the computer!</p>
+        </header>
+
+        <!-- Score Board -->
+        <section class="scoreboard">
+            <div class="score-card player-score">
+                <h3>You</h3>
+                <p class="score" id="playerScore">0</p>
+            </div>
+            <div class="score-card tie-score">
+                <h3>Ties</h3>
+                <p class="score" id="tieScore">0</p>
+            </div>
+            <div class="score-card computer-score">
+                <h3>Computer</h3>
+                <p class="score" id="computerScore">0</p>
+            </div>
+        </section>
+
+        <!-- Battle Display Area -->
+        <section class="battle-area">
+            <div class="choice-display">
+                <div class="player-choice">
+                    <h4>Your Choice</h4>
+                    <div class="choice-icon" id="playerIcon">?</div>
+                </div>
+                <div class="vs-divider">
+                    <span class="vs-text">VS</span>
+                </div>
+                <div class="computer-choice">
+                    <h4>Computer Choice</h4>
+                    <div class="choice-icon" id="computerIcon">?</div>
+                </div>
+            </div>
+
+            <!-- Result Message -->
+            <div class="result-message" id="resultMessage"></div>
+        </section>
+
+        <!-- Game Controls -->
+        <section class="game-controls">
+            <h3 class="controls-title">Make Your Choice</h3>
+            <div class="choices">
+                <button class="choice-btn rock-btn" data-choice="rock" aria-label="Choose Rock">
+                    <span class="choice-emoji">🪨</span>
+                    <span class="choice-name">Rock</span>
+                </button>
+                <button class="choice-btn paper-btn" data-choice="paper" aria-label="Choose Paper">
+                    <span class="choice-emoji">📄</span>
+                    <span class="choice-name">Paper</span>
+                </button>
+                <button class="choice-btn scissors-btn" data-choice="scissors" aria-label="Choose Scissors">
+                    <span class="choice-emoji">✂️</span>
+                    <span class="choice-name">Scissors</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Round History -->
+        <section class="history-section" id="historySection">
+            <h3>Recent Rounds</h3>
+            <div class="history-list" id="historyList"></div>
+        </section>
+
+        <!-- Reset Button -->
+        <div class="reset-container">
+            <button class="reset-btn" id="resetBtn">Reset Game</button>
+        </div>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>DC 101 Web Development Project | Christopher Lasap</p>
+        </footer>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
